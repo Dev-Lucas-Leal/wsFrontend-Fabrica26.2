@@ -2,7 +2,7 @@ export function CoverBanner() {
   return (
     <section
       className="relative flex h-[420px] w-full items-end justify-center bg-slate-900 bg-cover bg-center"
-      style={{ backgroundImage: "url('/overwatch-cover.npg')" }}
+      style={{ backgroundImage: "url('/overwatch-cover.png')" }}
     >
 
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/70 to-transparent" />
