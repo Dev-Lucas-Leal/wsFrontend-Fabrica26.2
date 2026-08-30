@@ -57,7 +57,7 @@ O endpoint `GET /heroes` da OverFast API retorna, para cada herói, exatamente o
 ```bash
 # 1. Clone o repositório
 git clone <url-do-repositorio>
-cd overwatch-heroes
+cd wsFrontend-Fabrica26.2
 
 # 2. Instale as dependências
 npm install
