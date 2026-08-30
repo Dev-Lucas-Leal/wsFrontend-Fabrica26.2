@@ -29,21 +29,3 @@ export async function getHeroes(signal){
     }
 }
 
-export async function getHeroById(heroId, signal){
-    try{
-    const response = await fetch(`${BASE_URL}/heroes/${heroId}`,{signal,});
-
-    if(!response.ok){
-        throw new Error(`erro na Api(getHeroById): ${response.status}`);
-    }
-    return await response.json();
-
-    }catch(error){
-        if(error.name === 'AbortError') return;
-
-        console.error(`Falha ao buscar detalhe do herói ${heroId}:`,error);
-
-        throw new Error("Não foi possível carregar as informações do herói.",{cause: error});
-        }
-    
-}
