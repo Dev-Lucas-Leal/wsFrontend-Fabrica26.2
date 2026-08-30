@@ -1,7 +1,7 @@
 const BASE_URL = "https://overfast-api.tekrop.fr";
 
 /**
- * @param {AbortSignal} signal - permite cancelar a requisição (ex: unmount do componente).
+ * @param {AbortSignal} signal 
  * @returns {Promise<Array<{key: string, name: string, portrait: string, role: string}>>}
  */
 
