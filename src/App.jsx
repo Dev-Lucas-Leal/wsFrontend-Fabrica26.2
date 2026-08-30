@@ -1,5 +1,17 @@
-import { HomePage } from "./pages/HomePage";
+import { BrowserRouter } from "react-router-dom";
+import { Header } from "./components/Header/Header";
+import { AppRoute } from "./routes/AppRoute";
 
 export default function App() {
-  return <HomePage />;
+
+  return( 
+      <BrowserRouter>
+
+        <Header />
+
+        <AppRoute />
+
+      </BrowserRouter>
+  )
+
 }

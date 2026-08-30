@@ -1,3 +1,5 @@
+import { ChevronLeft, ChevronRight } from "lucide-react";
+
 /**
  * @param {{ currentPage: number, totalPages: number, onPageChange: (page: number) => void }} props
  */
@@ -8,18 +10,23 @@ export function Pagination({ currentPage, totalPages, onPageChange }) {
   const pageNumbers = Array.from({ length: totalPages }, (_, index) => index + 1);
 
   return (
+
     <nav className="mt-8 flex items-center justify-center gap-2" aria-label="Paginação">
 
       <button
         type="button"
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="rounded-md px-3 py-2 text-sm text-white disabled:opacity-30"
+        aria-label="Página anterior"
+        className="rounded-md p-2 text-white disabled:opacity-30"
       >
-        Anterior
+
+        <ChevronLeft className="h-4 w-4" />
+
       </button>
 
       {pageNumbers.map((pageNumber) => (
+
         <button
           key={pageNumber}
           type="button"
@@ -32,17 +39,21 @@ export function Pagination({ currentPage, totalPages, onPageChange }) {
         >
           {pageNumber}
         </button>
+
       ))}
+
 
       <button
         type="button"
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="rounded-md px-3 py-2 text-sm text-white disabled:opacity-30"
+        aria-label="Próxima página"
+        className="rounded-md p-2 text-white disabled:opacity-30"
       >
-        Próxima
+        <ChevronRight className="h-4 w-4" />
       </button>
-      
+
     </nav>
+    
   );
 }
